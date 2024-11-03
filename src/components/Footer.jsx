@@ -1,14 +1,16 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = (props) => {
+  const { showModal, handleToggleModal, data } = props;
+
   return (
     <footer>
         <div className="bgGradient"></div>
       <div>
-        <h2>The Brutal Martin Project</h2>
         <h1>APOD PROJECT</h1>
+        <h2>{data?.title}</h2>
       </div>
-      <button>
+      <button onClick={handleToggleModal}>
         <i className="fa-solid fa-circle-info"></i>
       </button>
     </footer>
